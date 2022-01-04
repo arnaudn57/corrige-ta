@@ -1,7 +1,14 @@
 <h2>Je suis l'edit du round</h2>
+<p> Round : <%= @round.position %> </p>
+<div class="container">
+  <% @personas.each do |persona| %>
+    <img src= <%= persona.url%> alt="persona" width="100">
+  <% end %>
 
+</div>
 <%= simple_form_for [@game, @round] do |f| %>
+
   <%= f.input :user_feature, collection: ["name", "url", "gender", "hat_color",	"hair_color",	"hair_length","eyes",	"nose",	"mustache",	"beard", "face_shape", "glasses",	"earrings",	"face_color"]  %>
-  <%= f.input :user_adjective, collection: ["male", "female", "grey", "white", "missing", "yellow", "green", ] %>
+  <%= f.input :user_adjective, collection: ["male", "female", "grey", "white", "missing", "yellow", "green", "big", "medium", "small", "black", "brown", "orange", "chubby", "long", "egg", "medium"] %>
   <%= f.button :submit %>
 <% end %>
