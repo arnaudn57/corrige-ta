@@ -1,0 +1,2 @@
+class ComputerPersona < ApplicationRecord
+end

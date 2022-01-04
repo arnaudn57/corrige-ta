@@ -1,0 +1,8 @@
+<h2 class="text-center">Choisissez le personnage que l'ordinateur devra trouver</h2>
+
+<div class="container w-25">
+    <%= simple_form_for @game do |f| %>
+      <%= f.association :persona, as: :radio_buttons, class:"w-25" %>
+      <%= f.button :submit %>
+    <% end %>
+</div>

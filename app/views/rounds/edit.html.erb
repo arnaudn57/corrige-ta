@@ -1,0 +1,7 @@
+<h2>Je suis l'edit du round</h2>
+
+<%= simple_form_for [@game, @round] do |f| %>
+  <%= f.input :user_feature, collection: ["name", "url", "gender", "hat_color",	"hair_color",	"hair_length","eyes",	"nose",	"mustache",	"beard", "face_shape", "glasses",	"earrings",	"face_color"]  %>
+  <%= f.input :user_adjective, collection: ["male", "female", "grey", "white", "missing", "yellow", "green", ] %>
+  <%= f.button :submit %>
+<% end %>
